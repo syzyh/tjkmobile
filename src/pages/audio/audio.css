@@ -1,0 +1,84 @@
+.audio-page {
+  padding: 0.3rem;
+  background-color: white;
+  padding-bottom: 1rem;
+}
+.audio-button-img {
+  text-align: center;
+}
+
+.audio-button-img img {
+  width: 4.2rem;
+  height: 4.2rem;
+  object-fit: cover;
+  box-shadow: 0.1rem 0.1rem 0.1rem darkgray;
+  margin-bottom: 0.3rem;
+}
+
+.page-margin {
+  margin: 0.3rem;
+}
+
+.audio-title {
+  font-size: 0.4rem;
+  color: #000;
+  margin-bottom: 0.1rem;
+}
+
+.audio-description {
+  font-size: 0.32rem;
+  font-weight: 300;
+  color: #333;
+  text-indent: 0.8rem;
+  margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
+}
+
+.audio-time {
+  color: #555;
+  font-size: 0.24rem;
+  font-weight: 300;
+}
+
+.audio-player-bottom {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  line-height: 1.2rem;
+  text-align: center;
+}
+
+.audio-button-div {
+  text-align: center;
+}
+
+.audio-player-bottom i {
+  font-size: 0.5rem;
+  position: relative;
+  bottom: 0.01rem;
+}
+.audio-slide-div {
+  margin-bottom: 0.2rem;
+}
+
+.audio-slide-line {
+  height: 0.01rem;
+  background-color: #888;
+}
+
+.audio-slide-loadedline {
+  height: 0.01rem;
+  background-color: #86a697;
+  position: relative;
+  bottom: 0.01rem;
+  width: 0;
+}
+
+.audio-slide-botton {
+  position: relative;
+  height: 0.4rem;
+  width: 0.2rem;
+  border-radius: 0.1rem;
+  background-color: #86a697;
+  bottom: 0.2rem;
+}

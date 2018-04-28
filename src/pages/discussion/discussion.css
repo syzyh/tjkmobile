@@ -1,0 +1,80 @@
+.discussion-edit-icon {
+  font-size: 0.45rem;
+  margin-left: 0.2rem;
+}
+
+.discussion-page {
+  padding: 0.3rem;
+  background-color: white;
+  padding-bottom: 1rem;
+}
+
+.discussion-img {
+  border-radius: 0.1rem;
+  max-width: 100%;
+  max-height: 10rem;
+}
+
+.discussion-header {
+  display: flex;
+}
+
+.discussion-avatar {
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.2rem;
+  display: flex;
+
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.discussion-username {
+  font-size: 0.32rem;
+  margin-bottom: 0.1rem;
+  margin-top: 0.1rem;
+}
+
+.discussion-time {
+  font-size: 0.24rem;
+  font-weight: 300;
+  color: #888;
+}
+
+.discussion-title {
+  margin-top: 0.3rem;
+  font-size: 0.4rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+.discussion-words {
+  line-height: 1.6;
+}
+
+.opinion-submit-position {
+  height: 1rem;
+}
+
+.opinion-submit {
+  height: 1rem;
+  position: fixed;
+  background-color: #eee;
+  bottom: 0rem;
+  left: 0rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.opinion-submit-input {
+  height: 0.6rem;
+  background-color: #fff;
+  width: 100%;
+  margin: 0 0.2rem;
+  border-radius: 0.3rem;
+  line-height: 0.6rem;
+  color: #ccc;
+  font-weight: 100;
+  padding-left: 0.1rem;
+  font-size: 0.32rem;
+}

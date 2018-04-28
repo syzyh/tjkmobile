@@ -1,0 +1,66 @@
+.forum-item {
+  margin: 0.3rem;
+}
+
+.forum-content-word {
+  color: #333;
+  font-size: 0.28rem;
+  margin-bottom: 0.3rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.forum-footer-word {
+  color: #333;
+  font-size: 0.24rem;
+  margin-bottom: 0.2rem;
+  margin-top:0.1rem;
+  font-weight: 300;
+}
+
+.forum-footer-number i {
+  font-size: 0.24rem;
+  color: #bbb;
+}
+
+
+.forum-title {
+  font-size: 0.32rem;
+  margin-bottom: 0.1rem;
+  color: #000;
+  font-weight: 400;
+}
+
+.forum-content-singleImg {
+  width: 100%;
+  height: 2.4rem;
+  object-fit: cover;
+}
+
+.forum-content-doubleImg {
+  width: 48%;
+  height: 2rem;
+  object-fit: cover;
+  margin-right: 0.1rem;
+}
+
+.forum-content-multiImg {
+  width: 31%;
+  height: 1.6rem;
+  object-fit: cover;
+  margin-right: 0.1rem;
+}
+
+.forum-footer-number {
+  float: right;
+}
+
+.forum-content-words {
+  max-height: 1.8rem;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}

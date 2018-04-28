@@ -1,0 +1,79 @@
+.my-carousel { 
+    background: #fff;
+}
+.my-carousel a {
+  display: inline-block;
+  width: 100%;
+  margin: 0; padding: 0;
+}
+.my-carousel a img {
+  width: 100%;
+  vertical-align: top;
+  height: 3rem;
+  object-fit: cover;
+}
+.my-carousel .v-item {
+  height: 0.72rem;
+  line-height: 0.72rem;
+  padding-left: 0.2rem;
+}
+.type-block {
+  box-sizing: border-box;
+  padding: 0 0.1rem;
+  display: inline-block;
+  position: relative;
+}
+
+.type-row {
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  height: 2.4rem;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+.type-row ul {
+  margin: 0;
+  padding: 0;
+}
+
+.type-title {
+  padding-left: 0.2rem;
+  font-size: 0.32rem;
+}
+
+.type-row img {
+  width: 100%;
+  border-radius: 0.1rem;
+  object-fit: cover;
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+.type-row p {
+  color: #333;
+  font-weight: 300;
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+}
+
+.cut-line {
+  background-color: #888;
+  width: 100%;
+  height: 0.01rem;
+}
+.type-row::-webkit-scrollbar {
+  width: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.type-row-scrollbar {
+  height: 2.3rem;
+  overflow: hidden;
+}

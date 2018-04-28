@@ -1,0 +1,37 @@
+.navBar {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+}
+
+.navBarAll {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.navFooter {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.navPage {
+  position: fixed;
+  z-index: 101;
+  width: 100%;
+  background-color: #F5F5F9;
+  top: 0;
+  height: 100%;
+}
+
+.navScroll {
+  padding: 0.9rem 0 0 0;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  background-color: #F5F5F9;
+}

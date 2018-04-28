@@ -1,0 +1,130 @@
+.back-icon {
+  position: absolute;
+  top: 0.5rem;
+  z-index: 200;
+}
+
+.branch-img {
+  width: 100%;
+  object-fit: cover;
+  filter:blur(0.1rem);
+  -webkit-filter:blur(0.1rem);
+  -moz-filter:blur(0.1rem);
+  -ms-filter:blur(0.1rem);
+  -o-filter:blur(0.1rem);
+}
+
+.branch-list {
+  overflow: scroll;
+}
+
+.audios-listItem img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.edit-button {
+  background-color: #86a697;
+  width: 1.2rem;
+  height: 1.2rem;
+  box-shadow: 0 0 0.1rem #000 ;
+  border-radius: 50%;
+  line-height: 1.2rem;
+  text-align: center;
+  color: white;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 0.4rem;
+  font-size: 0.6rem;
+}
+
+.create-box {
+  height: 5rem;
+  background-color: white;
+  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: scroll;
+}
+
+.create-image-input {
+  display: none
+}
+
+.delete-img-btn {
+  width: 0.94rem;
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0.2rem;
+}
+
+.delete-img-btn-box {
+  position: relative;
+}
+
+.upload-img {
+  width: 100%;
+}
+
+.create-box-button {
+  background-color: white;
+}
+
+.back-link {
+  color: white;
+}
+
+.back-words {
+  display: inline-block;
+  line-height: 1rem;
+}
+
+.reply {
+  margin-left: 1.2rem;
+}
+
+.username {
+  padding-right: 0.1rem;
+  font-weight: 150;
+  color: #666;
+}
+
+.toward-username {
+  padding-right: 0.1rem;
+  padding-left: 0.1rem;
+  font-weight: 150;
+  color: #666;
+}
+
+.reply-item {
+  word-wrap: break-word;
+  margin-bottom: 0.1rem;
+  line-height: 0.45rem;
+}
+
+.audios-content-img {
+  display: table-cell;
+  width: 1.2rem;
+  height: 1.2rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 0.2rem;
+}
+
+.branch-description {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  width: 2rem;
+  height: 1.2rem;
+  margin-left: -1rem;
+  margin-top: -0.6rem;
+}
+
+.branch-name{
+  text-align: center;
+  color: #eee;
+  font-size: 0.36rem;
+  font-weight: 100;
+  margin-bottom: 0.2rem;
+}
