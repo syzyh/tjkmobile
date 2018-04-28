@@ -75,7 +75,7 @@ class Discussion extends Component {
   
   render() {
     const d = this.props.discussion.discussion;
-    console.log(d);
+
     return (
       <NavPage>
         <NavBarP

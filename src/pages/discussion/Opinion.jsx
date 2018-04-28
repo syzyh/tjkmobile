@@ -16,7 +16,6 @@ class Opinion extends Component {
     this.setState({ replyId, towardUser});
   }
 
-
   render() {
     return (
       <div>
