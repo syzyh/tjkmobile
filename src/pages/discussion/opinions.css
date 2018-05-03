@@ -80,3 +80,9 @@
   color: #f30;
   padding-left: 0.2rem;
 }
+
+.opinion-show-null {
+  text-align: center;
+  padding: 0.2rem;
+  color: #86a697;
+}

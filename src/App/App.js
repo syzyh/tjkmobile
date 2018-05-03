@@ -82,20 +82,6 @@ class App extends Component {
           <Home history={this.props.history} />
         </TabBar.Item>
         <TabBar.Item
-          icon={
-            <i className={"iconfont icon-xiaoxi"}></i>
-          }
-          selectedIcon={<i className={"iconfont icon-xiaoxi1"}></i>}
-          title="消息"
-          key="消息"
-          selected={this.state.selectedTab === 'message'}
-          onPress={() => {
-            this.props.history.push("/tab/message");
-          }}
-        >
-          <Message />
-        </TabBar.Item>
-        <TabBar.Item
           icon={<i className={"iconfont icon-rengezhongxin"}></i>}
           selectedIcon={<i className={"iconfont icon-101"}></i>}
           title="我的"
@@ -120,3 +106,18 @@ export default connect(
     signInByCode: code => { dispatch(signInByCode(code)); }
   })
 )(App);
+
+        // <TabBar.Item
+        //   icon={
+        //     <i className={"iconfont icon-xiaoxi"}></i>
+        //   }
+        //   selectedIcon={<i className={"iconfont icon-xiaoxi1"}></i>}
+        //   title="消息"
+        //   key="消息"
+        //   selected={this.state.selectedTab === 'message'}
+        //   onPress={() => {
+        //     this.props.history.push("/tab/message");
+        //   }}
+        // >
+        //   <Message />
+        // </TabBar.Item>

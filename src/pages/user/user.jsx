@@ -37,7 +37,6 @@ class UserSetting extends Component {
             thumb={user.avatarUrl}
             multipleLine
             className={style['large_thumb']}
-            onClick={()=>this.props.history.push(this.props.match.url+'/person/')}
           >
             <div style={{fontSize: "0.44rem", height: "0.6rem"}}>{user.userName}</div>
           </Item>
@@ -75,25 +74,7 @@ class UserSetting extends Component {
       return (
       <div>
         <NavBar>我</NavBar>
-        <List>
-          <InputItem
-            clear
-            placeholder="输入名称"
-            
-            value={this.state.inputName}
-            onChange={this.handleName}
-          >名称</InputItem>
-          <List.Item>
-            <div
-              style={{ width: '100%', color: '#108ee9', textAlign: 'center' }}
-              onClick={() => {
-                this.props.signIn(this.state.inputName);
-              }}
-            >
-              登录
-            </div>
-          </List.Item>
-        </List>
+        <div style={{textAlign: 'center'}}>尚未登录</div>
       </div>
     );
     }
@@ -109,3 +90,21 @@ export default connect(
     signOut: () => { dispatch(signOut());},
   })
 )(UserSetting);
+        // <List>
+        //   <InputItem
+        //     clear
+        //     placeholder="输入名称"
+        //     value={this.state.inputName}
+        //     onChange={this.handleName}
+        //   >名称</InputItem>
+        //   <List.Item>
+        //     <div
+        //       style={{ width: '100%', color: '#108ee9', textAlign: 'center' }}
+        //       onClick={() => {
+        //         this.props.signIn(this.state.inputName);
+        //       }}
+        //     >
+        //       登录
+        //     </div>
+        //   </List.Item>
+        // </List>

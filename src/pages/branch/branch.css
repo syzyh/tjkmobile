@@ -126,8 +126,8 @@
 
 .branch-name{
   text-align: center;
-  color: #eee;
+  color: #333;
   font-size: 0.36rem;
-  font-weight: 100;
+  font-weight: 400;
   margin-bottom: 0.2rem;
 }
