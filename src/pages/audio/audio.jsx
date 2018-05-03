@@ -52,7 +52,7 @@ class Audio extends Component {
   }
 
   render() {
-    if (this.props.fetching || !this.props.audio) return <Facebook />
+    //if (this.props.fetching || !this.props.audio) return <Facebook />
     return (
       <NavPage>
       <NavBarP 
@@ -60,13 +60,19 @@ class Audio extends Component {
         leftContent="返回"
         footer={
           <div className={oStyle['opinion-submit']}>
-            <div className={oStyle['opinion-submit-input']} onClick={()=>this.createOpinionModal()}>
+            <div
+              className={oStyle['opinion-submit-input']}
+              onClick={()=>this.createOpinionModal()}
+            >
               发表评论
             </div>
           </div>
         }
         onLeftClick={()=>this.props.history.goBack()}
       > 
+      {
+        (this.props.fetching || !this.props.audio) ?
+        <Facebook /> :
         <div className={style["audio-page"]}>
           <AudioComponent audio={this.props.audio} />
           <Opinions
@@ -80,6 +86,7 @@ class Audio extends Component {
             getOpinion={c => this.createReply(c)}
           />
         </div>
+      }
       </NavBarP>
       </NavPage>
     );
