@@ -1,7 +1,8 @@
 import axios from 'axios';
 
-const opinionUrl = '/serve/api/opinion';
-const discussionUrl = '/serve/api/discussion';
+import {apiConfig} from '../config';
+const opinionUrl = apiConfig('/serve/api/opinion');
+const discussionUrl = apiConfig('/serve/api/discussion');
 
 export const fetchDiscussionAPI = (id) => {
   return axios.get(discussionUrl, {params: {id}});

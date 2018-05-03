@@ -1,9 +1,11 @@
 import axios from 'axios';
-axios.defaults.withCredentials = true;
 
-const userUrl = '/serve/api/user';
-const userSubscriptionUrl = '/serve/api/user/subscription';
-const discussionUrl = '/serve/api/discussion';
+import {apiConfig} from '../config';
+const userUrl = apiConfig('/serve/api/user');
+const userSubscriptionUrl = apiConfig('/serve/api/user/subscription');
+const discussionUrl = apiConfig('/serve/api/discussion');
+
+axios.defaults.withCredentials = true;
 
 export const signInByCodeAPI = code => {
   return axios.post(userUrl + '/signInByCode', { code });

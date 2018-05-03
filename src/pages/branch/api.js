@@ -1,10 +1,11 @@
 import axios from 'axios';
 
+import {apiConfig} from '../config';
 //const branchUrl = '/serve/api/branch';
-const discussionUrl = '/serve/api/discussion';
-const opinionUrl = '/serve/api/opinion';
-const audioUrl = '/serve/api/audio';
-const departmentUrl = '/serve/api/department';
+const discussionUrl = apiConfig('/serve/api/discussion');
+const opinionUrl = apiConfig('/serve/api/opinion');
+const audioUrl = apiConfig('/serve/api/audio');
+const departmentUrl = apiConfig('/serve/api/department');
 
 export const fetchAllDiscussionsAPI = (branch_name) => {
   return axios.get(discussionUrl, {params: {branch_name}});

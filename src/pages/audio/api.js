@@ -1,7 +1,9 @@
 import axios from 'axios';
 
-const audioUrl = '/serve/api/audio';
-const opinionUrl = '/serve/api/opinion';
+import {apiConfig} from '../config';
+
+const audioUrl = apiConfig('/serve/api/audio');
+const opinionUrl = apiConfig('/serve/api/opinion');
 
 export const fetchAudioAPI = (id) => {
   return axios.get(audioUrl, {params: {id}});

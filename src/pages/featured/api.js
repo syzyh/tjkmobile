@@ -1,7 +1,8 @@
 import axios from 'axios';
 
-const categoryUrl = '/serve/api/category';
-const departmentUrl = '/serve/api/department';
+import {apiConfig} from '../config';
+const categoryUrl = apiConfig('/serve/api/category');
+const departmentUrl = apiConfig('/serve/api/department');
 
 export const fetchAllCategorysAPI = () => {
   return axios.get(categoryUrl);
