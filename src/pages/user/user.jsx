@@ -8,7 +8,6 @@ import style from './user.css';
 import { signIn, signOut } from './action.js';
 
 const Item = List.Item;
-const Brief = Item.Brief;
 
 class UserSetting extends Component {
   constructor(props) {
@@ -33,7 +32,6 @@ class UserSetting extends Component {
         <NavBar>我</NavBar>
         <List className="my-list" renderHeader={null}>
           <Item
-            arrow="horizontal"
             thumb={user.avatarUrl}
             multipleLine
             className={style['large_thumb']}
