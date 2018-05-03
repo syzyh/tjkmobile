@@ -12,6 +12,7 @@ import NavPage from '../../util/NavPage';
 import AudioComponent from './AudioComponent';
 
 import style from './audio.css';
+import oStyle from '../discussion/discussion.css';
 
 import { 
   fetchAudioById,
@@ -57,6 +58,13 @@ class Audio extends Component {
       <NavBarP 
         title="听健康"
         leftContent="返回"
+        footer={
+          <div className={oStyle['opinion-submit']}>
+            <div className={oStyle['opinion-submit-input']} onClick={()=>this.createOpinionModal()}>
+              发表评论
+            </div>
+          </div>
+        }
         onLeftClick={()=>this.props.history.goBack()}
       > 
         <div className={style["audio-page"]}>
