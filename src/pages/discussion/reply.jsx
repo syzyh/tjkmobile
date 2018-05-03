@@ -10,9 +10,8 @@ class Reply extends Component {
   }
   render() {
     if (!this.props.data || this.props.data.length === 0) return null;
-    const hasHidenReply = this.props.data.length > this.state.limt;
     const showData = this.props.data.slice(0, this.state.limit);
-    console.log(this.props.data.length, this.state.limit, hasHidenReply);
+    console.log(this.props.data.length, this.state.limit, this.props.data.length > this.state.limit);
     return (
       <div className={style['reply']}>
         <div className={style['reply-arrow']}></div>
@@ -43,7 +42,7 @@ class Reply extends Component {
           }
           <div>
             {
-              hasHidenReply ? <div className={style['reply-showmore']} onClick={this.setState({limit: this.state.limit + 5})}>查看更多</div> : null
+              this.props.data.length > this.state.limit ? <div className={style['reply-showmore']} onClick={this.setState({limit: this.state.limit + 5})}>查看更多</div> : null
             }
           </div>
         </div>
