@@ -21,8 +21,10 @@ class Audio extends Component {
 
   componentDidMount() {
     console.log(this.props);
-    if (this.props.audio === null) {
-      this.props.fetchAudioById(this.props.match.params.id);
+    const temAudio = this.props.audio;
+    const routerId = this.props.match.params.id;
+    if (temAudio || temAudio._id === routerId) {
+      this.props.fetchAudioById(routerId);
     }
   }
 

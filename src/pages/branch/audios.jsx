@@ -6,7 +6,7 @@ import style from '../message/message.css';
 const Item = List.Item;
 const Brief = Item.Brief;
 
-//props: audios, type, setAudio
+//props: audios, type
 class Audios extends Component {
   render() {
     return (

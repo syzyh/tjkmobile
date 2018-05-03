@@ -31,8 +31,6 @@ class Branch extends Component {
   componentDidMount() {
     this.props.fetchDepartment(this.props.match.url.split('branch/')[1]);
   }
-  
-  
 
   onTabsChange = (tab, index) => {
     if (index === 0) {
@@ -82,10 +80,10 @@ class Branch extends Component {
               <Forum slicedHeight={ 0.87 + this.state.remImgHeight } setDiscussion={this.props.setDiscussion} discussions={this.props.discussions}/>
             </div>
             <div style={{ backgroundColor: '#f5f5f9' }}>
-              <Audios type="audio" setAudio={this.props.setAudio} audios={this.props.audios} />
+              <Audios type="audio" audios={this.props.audios} />
             </div>
             <div style={{ backgroundColor: '#f5f5f9' }}>
-              <Audios type="video" setAudio={this.props.setAudio} audios={this.props.audios} />
+              <Audios type="video" audios={this.props.audios} />
             </div>
         </Tabs>
         <Link to={`${this.props.match.url}/create`} >
