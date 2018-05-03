@@ -42,7 +42,7 @@ class Reply extends Component {
           }
           <div>
             {
-              this.props.data.length > this.state.limit ? <div className={style['reply-showmore']} onClick={this.setState({limit: this.state.limit + 5})}>查看更多</div> : null
+              this.props.data.length > this.state.limit ? <div className={style['reply-showmore']} onClick={()=>this.setState({limit: this.state.limit + 5})}>查看更多</div> : null
             }
           </div>
         </div>
