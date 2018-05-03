@@ -12,9 +12,11 @@
 }
 
 .audios-listItem img {
-  height: 1rem;
-  width: 1rem;
+  height: 1.2rem !important;
+  width: 1.2rem !important;
+  margin: 0.2rem 0;
   object-fit: cover;
+  border-radius: 0.1rem;
 }
 
 .audios-listItem div:nth-child(2) {
