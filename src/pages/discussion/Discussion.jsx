@@ -91,32 +91,25 @@ class Discussion extends Component {
           }
           rightContent={
             !!d && !!this.props.user && (this.props.user._id === d.user._id) ? 
-            [
-              (
-                <div
-                  key="delete"
-                  className={style["discussion-edit-icon"]}
-                  onClick={
-                    () => alert('删除', '确定要删除帖子？', [
-                      {text: '取消'},
-                      {text: '删除', onPress: () => {
-                        this.props.deleteDiscussion(d._id);
-                        this.setState({deletingDiscussion: true});
-                        }
+            (
+              <div
+                key="delete"
+                className={style["discussion-edit-icon"]}
+                onClick={
+                  () => alert('删除', '确定要删除帖子？', [
+                    {text: '取消'},
+                    {text: '删除', onPress: () => {
+                      this.props.deleteDiscussion(d._id);
+                      this.setState({deletingDiscussion: true});
                       }
-                    ]) 
-                  }
-                >
-                  <i className={"iconfont icon-shanchu"}></i>
-                </div>
-              ),
-              (
-                <div key="collect" className={style["discussion-edit-icon"]}>
-                  <i className={"iconfont icon-shoucang"}></i>
-                </div>
-              )
-            ] : 
-            (<div className={style["discussion-edit-icon"]}><i className={"iconfont icon-shoucang"}></i></div>)
+                    }
+                  ]) 
+                }
+              >
+                <i className={"iconfont icon-shanchu"}></i>
+              </div>
+            ): 
+            null
           }
         >
           {d === null ? 

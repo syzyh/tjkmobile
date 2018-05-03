@@ -39,7 +39,7 @@ class UserSetting extends Component {
             className={style['large_thumb']}
             onClick={()=>this.props.history.push(this.props.match.url+'/person/')}
           >
-            <div style={{fontSize: "0.44rem", height: "0.6rem"}}>{user.userName}</div><Brief>138****1234</Brief>
+            <div style={{fontSize: "0.44rem", height: "0.6rem"}}>{user.userName}</div>
           </Item>
         </List>
         
@@ -56,7 +56,6 @@ class UserSetting extends Component {
             arrow="horizontal"
             onClick={()=>this.props.history.push(mySubscribeUrl)}
           >我的订阅</Item>
-          <Item thumb="https://zos.alipayobjects.com/rmsportal/UmbJMbWOejVOpxe.png" arrow="horizontal" onClick={()=>{}}>我的收藏</Item>
         </List>
 
         <List renderHeader={() => ''}>

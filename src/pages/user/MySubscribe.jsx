@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import NavBarP from '../../util/NavBarP';
 import { SwipeAction, List } from 'antd-mobile';
+import { Link } from 'react-router-dom';
 
 import style from './user.css';
 import { subscribeDepartment } from './action.js';
@@ -48,7 +49,7 @@ class MySubscribe extends Component {
                 multipleLine
                 className={style['large_thumb']}
                 arrow="horizontal"
-                onClick={e => console.log(e)}
+                onClick={()=>this.props.history.push('/branch/' + d.department_urlName)}
               >
                 {d.department_name}
               </List.Item>
