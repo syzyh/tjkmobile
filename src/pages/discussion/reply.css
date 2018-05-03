@@ -32,4 +32,7 @@
 
 .reply-showmore {
   text-align: center;
+  border-top: solid #eee 0.01rem;
+  padding: 0.16rem;
+  color: #86a697;
 }
