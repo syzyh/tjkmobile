@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Opinion from './Opinion';
+//import Opinion from './Opinion';
 import Opinions from './opinions';
 import CreateOpinion from './CreateOpinion';
 import { Toast, Modal } from 'antd-mobile';

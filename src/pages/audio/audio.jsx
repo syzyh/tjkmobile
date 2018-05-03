@@ -3,11 +3,13 @@ import { connect } from 'react-redux';
 
 import { Facebook } from 'react-content-loader';
 
+import Opinions from '../discussion/opinions';
+import CreateOpinion from '../discussion/CreateOpinion';
+
 import NavBarP from '../../util/NavBarP';
 import NavPage from '../../util/NavPage';
 
 import AudioComponent from './AudioComponent';
-import Opinion from '../discussion/Opinion';
 
 import style from './audio.css';
 
@@ -18,6 +20,14 @@ import {
 } from './action.js';
 
 class Audio extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      creating: false,
+      reply_id: null,
+      toward_user: null,
+    }
+  }
 
   componentDidMount() {
     console.log(this.props);
@@ -32,6 +42,14 @@ class Audio extends Component {
     console.log(this.props);
   }
 
+  createOpinionModal = (r, t) => {
+    this.setState({creating: !this.state.creating, reply_id:r, toward_user:t});
+  }
+
+  createReply = content => {
+    this.props.createOpinion(content, this.state.reply_id, this.state.toward_user);
+  }
+
   render() {
     if (this.props.fetching || !this.props.audio) return <Facebook />
     return (
@@ -43,12 +61,15 @@ class Audio extends Component {
       > 
         <div className={style["audio-page"]}>
           <AudioComponent audio={this.props.audio} />
-          <Opinion
+          <Opinions
             opinions={this.props.opinions}
-            towardUser={this.props.audio._id}
-            deleteOpinion={this.props.deleteOpinion}
-            createOpinion={(o, r, t)=>this.props.createOpinion(this.props.audio._id, o, r, t)}
             user={this.props.user}
+            createOpinion={this.createOpinionModal}
+            deleteOpinion={this.props.deleteOpinion}
+          />
+          <CreateOpinion
+            creating={this.state.creating}
+            getOpinion={c => this.createReply(c)}
           />
         </div>
       </NavBarP>
@@ -63,7 +84,7 @@ export default connect(
   },
   dispatch => ({
     fetchAudioById: (id) => {dispatch(fetchAudioById(id))},
-    createOpinion: (a, c,r,t) => {dispatch(createOpinion(a,c,r,t))},
+    createOpinion: (c,r,t) => {dispatch(createOpinion(c,r,t))},
     deleteOpinion: id => {dispatch(deleteOpinion(id))}
   })
 )(Audio);
