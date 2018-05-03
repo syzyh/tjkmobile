@@ -12,7 +12,7 @@ class Reply extends Component {
     if (!this.props.data || this.props.data.length === 0) return null;
     const hasHidenReply = this.props.data.length > this.state.limt;
     const showData = this.props.data.slice(0, this.state.limit);
-    console.log(hasHidenReply);
+    console.log(this.props.data.length, this.state.limit, hasHidenReply);
     return (
       <div className={style['reply']}>
         <div className={style['reply-arrow']}></div>
