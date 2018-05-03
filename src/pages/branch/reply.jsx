@@ -6,8 +6,6 @@ class Reply extends Component {
     limit: 5,
   }
   render() {
-    console.log(this.props.data)
-    console.log(this.state)
     if (!this.props.data || this.props.data.length === 0) return null;
     return (
       <div className={style['reply']}>

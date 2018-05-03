@@ -5,13 +5,19 @@ import moment from 'moment';
 
 //props: data, reply,deleteReply,user
 class Reply extends Component {
+  state = {
+    limit: 5,
+  }
   render() {
     if (!this.props.data || this.props.data.length === 0) return null;
+    const hasHidenReply = this.props.data.length > this.state.limt;
+    const showData = this.props.data.slice(0, this.state.limit);
     return (
       <div className={style['reply']}>
         <div className={style['reply-arrow']}></div>
         <div className={style['reply-contents']}>
-          {this.props.data.map(r => (
+          { 
+            showData.map(r => (
             <div key={r._id} className={style['reply-item']}>
               <span onClick={()=>this.props.reply(r.user._id)}>
                 <span className={style['username']}>{r.user.userName}</span>
@@ -32,7 +38,11 @@ class Reply extends Component {
                 null
               }
             </div>
-          ))}
+            ))
+          }
+          {
+            hasHidenReply ? <div className={style['reply-showmore']} onClick={this.setState({limit: this.state.limit + 5})}>查看更多</div> : null
+          }
         </div>
       </div>
     );
