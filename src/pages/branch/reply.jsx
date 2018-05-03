@@ -12,6 +12,7 @@ class Reply extends Component {
         <div className={style['opinion-line']}></div>
         {
           this.props.data.map((r, index)=> {
+            console.log(index, this.state.limit)
             if (index < this.state.limit) {
               return (
                 <div key={r._id} className={style['reply-item']} onClick={this.props.reply(this.props.opinionId, {name: r.user.userName, id: r.user._id})}>

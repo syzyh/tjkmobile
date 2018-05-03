@@ -23,7 +23,7 @@ class Audio extends Component {
     console.log(this.props);
     const temAudio = this.props.audio;
     const routerId = this.props.match.params.id;
-    if (temAudio || temAudio._id === routerId) {
+    if (!temAudio || temAudio._id !== routerId) {
       this.props.fetchAudioById(routerId);
     }
   }
