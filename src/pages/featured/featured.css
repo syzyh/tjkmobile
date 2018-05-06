@@ -24,6 +24,11 @@
   position: relative;
 }
 
+.type-block p {
+  width: 100%;
+  text-align: center;
+}
+
 .type-row {
   position: relative;
   overflow-y: hidden;

@@ -83,7 +83,16 @@ class CreateDiscussion extends Component {
               </label>
             </form>),
             <span key='3' style={{width: '0.2rem'}}></span>,
-            <i key='1' className={"iconfont icon-fasong"} onClick={() => this.props.createDiscussion({branch_name: this.props.match.url.split('/')[2], ...this.state})}></i>,
+            <i key='1' className={"iconfont icon-fasong"} onClick={() => {
+              const {title, content} = this.state;
+              if(title.length === 0) {
+                Toast.fail("标题不可以为空",1);
+              } else if (content.length < 3 && content[0].length < 5) {
+                Toast.fail("内容数量不可以少于五个字",1);
+              } else {
+                 this.props.createDiscussion({branch_name: this.props.match.url.split('/')[2], title, content})
+              }
+            }}></i>,
           ]}
           onLeftClick={()=>this.props.history.goBack()}
         >

@@ -54,18 +54,6 @@ class UserSetting extends Component {
             onClick={()=>this.props.history.push(mySubscribeUrl)}
           >我的订阅</Item>
         </List>
-
-        <List renderHeader={() => ''}>
-          <Item thumb="https://zos.alipayobjects.com/rmsportal/UmbJMbWOejVOpxe.png" arrow="horizontal" onClick={()=>{}}>设置</Item>
-        </List>
-
-        <List renderHeader={() => ''}>
-          <Item 
-            thumb="https://zos.alipayobjects.com/rmsportal/UmbJMbWOejVOpxe.png"
-            arrow="horizontal"
-            onClick={() => {this.props.signOut();}}
-          >退出账号</Item>
-        </List>
       </div>
     );
     } else {

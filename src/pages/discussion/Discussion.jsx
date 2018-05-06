@@ -142,7 +142,6 @@ class Discussion extends Component {
               creating={this.state.creating}
               getOpinion={c => this.createReply(c)}
             />
-            <div className={style['opinion-submit-position']}></div>
           </div>
           }
         </NavBarP>
