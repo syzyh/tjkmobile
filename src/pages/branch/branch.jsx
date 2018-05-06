@@ -55,11 +55,9 @@ class Branch extends Component {
       <NavPage>
       {
         this.props.history.length > 0 ?
-        (<Link to={this.props.match.url.split('/branch')[0]} className={style['back-link']}>
-          <div className={style["back-icon"]}>
-            <Icon type="left" style={{color: '#000'}} />
-          </div> 
-        </Link>) :
+        (<div className={style["back-icon"]} onClick={()=>this.props.history.goBack()}>
+          <Icon type="left" style={{color: '#000'}} />
+        </div>) :
         null
       }
       { this.props.department ? (
