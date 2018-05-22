@@ -23,6 +23,10 @@ export const createDiscussion = (discussion) => {
           const discussions = [...getState().branch.discussions];
           discussions.unshift(result.data.discussion);
           dispatch({type: "creating_discussion_success", payload: discussions});
+
+          const myDiscussions = [...getState().user.myDiscussions];
+          myDiscussions.unshift(result.data.discussion);
+          dispatch({type: "updating_myDiscussions_success", payload: myDiscussions});
         }
       },
       error => dispatch({ type: "creating_discussion_failure", error: '网络出错' })

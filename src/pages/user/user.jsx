@@ -42,14 +42,12 @@ class UserSetting extends Component {
         
         <List renderHeader={() => ''}>
           <Item
-            thumb="https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png"
             arrow="horizontal"
             onClick={()=>this.props.history.push(myDiscussionsUrl)}
           >
             我的发帖
           </Item>
           <Item
-            thumb="https://zos.alipayobjects.com/rmsportal/UmbJMbWOejVOpxe.png"
             arrow="horizontal"
             onClick={()=>this.props.history.push(mySubscribeUrl)}
           >我的订阅</Item>

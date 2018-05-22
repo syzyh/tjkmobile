@@ -42,7 +42,7 @@ class Opinions extends Component {
                   <div className={style['opinion-footer']}>
                     <span className={dStyle['discussion-time']}>{moment(o.date).fromNow()}</span>
                     { 
-                      !!this.props.user && o.user._id === this.props.user._id ? 
+                      !!this.props.user && (o.user._id === this.props.user._id || this.props.user.role === 'admin') ? 
                       <span className={style['opinion-delete']} onClick={()=>this.deleteOpinionAlert(o._id)}>删除</span> : 
                       null
                     }

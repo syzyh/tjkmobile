@@ -55,6 +55,7 @@ export const userReducer = (state = initialState, action) => {
       }
 
     case "fetching_myDiscussions_success":
+    case "updating_myDiscussions_success":
       return {
         ...state,
         updating: false,

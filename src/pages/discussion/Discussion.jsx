@@ -90,7 +90,7 @@ class Discussion extends Component {
             </div>
           }
           rightContent={
-            !!d && !!this.props.user && (this.props.user._id === d.user._id) ? 
+            !!d && !!this.props.user && (this.props.user._id === d.user._id || this.props.user.role === 'admin') ? 
             (
               <div
                 key="delete"
