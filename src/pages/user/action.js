@@ -69,7 +69,6 @@ export const signInByCode = code => {
 //     )
 //   }
 // }
-
 export const signIn = (name) => {
   console.log('sign in:', name);
   return (dispatch, getState) => {
