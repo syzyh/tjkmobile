@@ -8,9 +8,18 @@ const Brief = Item.Brief;
 
 //props: audios, type
 class Audios extends Component {
+  state = {height: "0rem"}
+
+  componentDidMount() {
+    const hei = document.documentElement.clientHeight;
+    const remHei = hei / Number.parseInt(getComputedStyle(document.documentElement)['font-size'].split('px')[0], 10);
+    const height = (remHei - this.props.slicedHeight) + 'rem'
+    this.setState({ height });
+  } 
+
   render() {
     return (
-      <List className={style['audios-listBody']}>
+      <List className={style['audios-listBody']} style={{height: this.state.height, overflow: 'auto'}}>
         {
           this.props.audios.filter(a => a.type === this.props.type).map((a, index) => (
             <Link key={a._id} to={`/audio/${a._id}`} >
