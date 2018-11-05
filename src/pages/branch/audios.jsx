@@ -19,7 +19,7 @@ class Audios extends Component {
 
   render() {
     return (
-      <List className={style['audios-listBody']} style={{height: this.state.height, overflow: 'auto'}}>
+      <List className={style['audios-listBody']} style={{height: this.state.height}}>
         {
           this.props.audios.filter(a => a.type === this.props.type).map((a, index) => (
             <Link key={a._id} to={`/audio/${a._id}`} >
