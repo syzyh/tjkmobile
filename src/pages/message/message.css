@@ -19,7 +19,7 @@
   border-radius: 0.1rem;
 }
 
-.audios-listItem div:nth-child(2) {
+.audios-listItem am-list-line {
   border-bottom: 1px solid #666;
 }
 
