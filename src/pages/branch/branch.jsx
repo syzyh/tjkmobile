@@ -74,13 +74,13 @@ class Branch extends Component {
           </div>
         </div>
         <Tabs tabs={tabs} initialPage={0} swipeable={false} onChange={this.onTabsChange} >
-            <div style={{ height: this.state.listHeight, overflow: 'scroll' }}>
+            <div className={style["tab-content"]}  style={{ height: this.state.listHeight}}>
               <Forum slicedHeight={ 0.87 + this.state.remImgHeight } setDiscussion={this.props.setDiscussion} discussions={this.props.discussions}/>
             </div>
-            <div style={{ backgroundColor: '#f5f5f9' }}>
+            <div className={style["tab-content"]}  style={{ height: this.state.listHeight}}>
               <Audios type="audio" audios={this.props.audios} />
             </div>
-            <div style={{ backgroundColor: '#f5f5f9' }}>
+            <div className={style["tab-content"]}  style={{ height: this.state.listHeight}}>
               <Audios type="video" audios={this.props.audios} />
             </div>
         </Tabs>
